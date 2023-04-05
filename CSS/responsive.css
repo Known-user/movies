@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+@media screen and (max-width:1076px) {
+  .top nav ul li a {
+    padding: 0px 7px;
+    font-size: 20px;
+  }
+
+  .logo img {
+    /* padding: 0px 10px 0 0; */
+    height: 40px;
+  }
+  .search-user img{
+    height: 30px;
+  }
+  #Search-input {
+    height: 20px;
+    width: 200px;
+  }
+
+  .foot {
+    padding: 0 10px;
+  }
+
+  .top video {
+    top: -47%;
+  }
+
+  .content {
+    margin-top: 220px;
+    padding-left: 25px;
+    margin-bottom: 25px;
+  }
+
+  .content h1 {
+    font-size: 60px;
+  }
+
+  .content h5{
+    font-size: 20px;
+  }
+
+  .content h4{
+    font-size: 19px;
+  }
+
+  .content h3{
+    font-size: 19px;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
+
+  .btn a{
+    font-size: 13px;
+  }
+
+  #download{
+    height: 14px;
+    width: 35px;
+  }
+
+  main .container section{
+    padding: 0 30px;
+    margin: 30px 0;
+  }
+
+  #popular {
+    margin: 0px 0 30px 0;
+  }
+}
+
+@media screen and (max-width:865px) {
+  .top nav{
+    padding: 10px 2px;
+  }
+
+  .logo img{
+    height: 35px;
+  }
+
+  .top nav ul li a {
+    padding: 0px 5px;
+    font-size: 18px;
+  }
+
+  #Search-input {
+    height: 18px;
+    width: 185px;
+  }
+
+  .search-user img {
+    height: 35px;
+    border-radius: 40px;
+  }
+
+  .card1 {
+    width: 10rem;
+    height: 16rem;
+  }
+
+  .card1-body h4 {
+    font-size: 20px;
+  }
+
+  .hub p {
+    font-size: 12px;
+  }
+
+  .hub h3 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:670px) {
+  .top nav {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .top {
+    background-color: black;
+  }
+
+  .top::before {
+    z-index: -1;
+  }
+
+  header {
+    height: 29%;
+  }
+
+  .logo {
+    margin: 24px 0 8px 0;
+  }
+
+  .logo img {
+    /* padding: 0px 10px 0 0; */
+    height: 40px;
+  }
+
+  .top nav ul li a {
+    padding: 0px 2vw;
+    font-size: 15px;
+  }
+
+  .search-user img {
+    height: 40px;
+  }
+
+  #Search-input {
+    height: 25px;
+    width: 268px;
+    border-radius: 20px;
+    margin-right: 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255, .3);
+    color: white;
+    font-size: 15px;
+    padding: 3px 0px;
+  }
+
+  .top video {
+    position: absolute;
+    width: 120%;
+    height: 190%;
+    top: -56%;
+  }
+
+  .btns a {
+    padding: 8px 14px;
+    font-size: 20px;
+  }
+
+  #download {
+    height: 24px;
+    width: 40px;
+  }
+
+  .content {
+    position: relative;
+    color: white;
+    margin-top: 39vh;
+    padding-left: 14px;
+    padding-bottom: 45px;
+    margin-bottom: 0;
+  }
+
+  .content h1 {
+    font-size: 41px;
+    margin: 9px 0;
+  }
+
+  .content h5 {
+    font-size: 20px;
+  }
+
+  .content h4 {
+    font-size: 20px;
+  }
+
+  .content h3 {
+    font-size: 19px;
+  }
+
+  main .container section {
+    padding: 0 25px;
+  }
+
+  #popular {
+    margin: 0 0 20px 0;
+  }
+
+  .content p {
+    font-size: 11px;
+    width: 95%;
+    word-break: break-all;
+    margin: 15px 0;
+    opacity: .7;
+  }
+
+  
+  #popular .oneLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #popular .oneRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #latest .twoLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #latest .twoRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #upcoming .threeLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #upcoming .threeRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #top_rated .fourLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #top_rated .fourRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  .fa-chevron-left, .fa-chevron-right {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+  }
+
+  main .container section .cards {
+    margin-top: 10px;
+  }
+
+  main .container section {
+    margin: 17px 0;
+  }
+
+  main {
+    height: auto;
+  }
+
+  footer::before {
+    height: 92vh;
+  }
+
+  footer {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .foot {
+    padding: 0 10px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footUpper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .foot1 {
+    width: 71vw;
+    height: 33vh;
+  }
+
+  .foot1 img {
+    height: 60px;
+    width: 230px;
+  }
+
+  footer p {
+    font-size: 17px;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .socialbtns .fa {
+    width: 32px;
+    height: 23px;
+    color: #000;
+    background-color: #FFF;
+    border: none;
+  }
+
+  .foot2 {
+    height: 33vh;
+    width: 22vw;
+  }
+
+  footer h3 {
+    font-size: 24px;
+    color: white;
+    margin: 38px 0 13px 0;
+  }
+
+  .foot a {
+    color: white;
+    font-size: 18px;
+    margin: 4px 0;
+  }
+
+  .footLower {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .foot3 {
+    width: 27vw;
+  }
+
+  .foot4 {
+    width: 60vw;
+  }
+
+  footer h3 {
+    font-size: 24px;
+    color: white;
+    margin: 38px 0 13px 0;
+  }
+
+  .foot_last {
+    padding: 20px 25px;
+  }
+
+  .end {
+    height: 10vh;
+    padding: 0px 15px;
+  }
+
+  .end p {
+    font-size: 23px;
+  }
+
+  .main {
+    padding: 0;
+  }
+
+  .card1 {
+    width: 10rem;
+    height: 14rem;
+    margin: 10px;
+  }
+
+  .card1-body h4 {
+    font-size: 15px;
+  }
+
+  .hub p {
+    font-size: 10px;
+  }
+
+  .hub h3 {
+    font-size: 10px;
+  }
+
+  .card1-body a {
+    margin-left: 40px;
+    height: 25px;
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width:570px) {
+  .top nav ul li a {
+    padding: 0px 1vw;
+    font-size: 15px;
+  }
+
+  .card1 {
+    width: 12rem;
+    height: 23rem;
+    margin: 10px;
+  }
+
+  .top video{
+    top: -53%;
+  }
+
+  .content {
+    margin-top: 32vh;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+    margin: 9px 0;
+  }
+  
+  .content h5 {
+    font-size: 15px;
+  }
+  
+  .content h4 {
+    font-size: 14px;
+  }
+  
+  .content h3 {
+    font-size: 14px;
+  }
+  
+  .content p {
+    font-size: 10px;
+    margin: 10px 0;
+  }
+  
+  .btns a {
+    padding: 8px 14px;
+    font-size: 10px;
+  }
+  
+  #download {
+    height: 13px;
+    width: 20px;
+  }
+
+  #popular .oneLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #popular .oneRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #latest .twoLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #latest .twoRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #upcoming .threeLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #upcoming .threeRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #top_rated .fourLeft {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  #top_rated .fourRight {
+    font-size: 25px; 
+    display: grid;
+  }
+  
+  .fa-chevron-left, .fa-chevron-right {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+  }
+  
+  .card1 {
+    width: 8rem;
+    height: 14rem;
+    margin: 10px;
+  }
+
+  .card1-body h4 {
+    font-size: 15px;
+  }
+
+  .hub p {
+    font-size: 9px;
+  }
+
+  .hub h3 {
+    font-size: 9px;
+  }
+
+}
+
+@media screen and (max-width:470px) {
+.logo img{
+  height: 30px;
+}
+
+.top nav ul li a {
+  padding: 0px 1vw;
+  font-size: 13px;
+}
+
+#Search-input {
+  height: 20px;
+  width: 210px;
+  font-size: 10px;
+  padding: 3px 0px;
+}
+
+.search-user img {
+  height: 30px;
+}
+
+.content {
+  margin-top: 28vh;
+  padding-left: 14px;
+  padding-bottom: 25px;
+  margin-bottom: 0;
+}
+
+.content h1 {
+  font-size: 30px;
+  margin: 9px 0;
+}
+
+.content h5 {
+  font-size: 15px;
+}
+
+.content h4 {
+  font-size: 14px;
+}
+
+.content h3 {
+  font-size: 14px;
+}
+
+.content p {
+  font-size: 10px;
+  margin: 10px 0;
+}
+
+.btns a {
+  padding: 8px 14px;
+  font-size: 10px;
+}
+
+#download {
+  height: 13px;
+  width: 20px;
+}
+
+main .container section .cards {
+  height: 200px;
+}
+
+main .container section .cards .card-item:hover {
+  min-width: 230px;
+}
+
+main .container section .cards .card-item {
+  min-width: 125px;
+  height: 188px;
+}
+
+.cont2{
+  padding: 0 5px;
+}
+
+.cont2 h4 {
+  font-size: 15px;
+}
+
+.sub p{
+  font-size: 10px;
+}
+
+.sub h3{
+  font-size: 10px;
+}
+
+.socialbtns .fa {
+  width: 30px;
+  height: 18px;
+}
+
+.foot1 img {
+  height: 48px;
+  width: 185px;
+}
+
+footer h3 {
+  margin: 5px 0 13px 0;
+}
+
+
+#popular .oneLeft {
+  font-size: 20px; 
+  display: grid;
+}
+
+#popular .oneRight {
+  font-size: 20px; 
+  display: grid;
+}
+
+#latest .twoLeft {
+  font-size: 20px; 
+  display: grid;
+}
+
+#latest .twoRight {
+  font-size: 20px; 
+  display: grid;
+}
+
+#upcoming .threeLeft {
+  font-size: 20px; 
+  display: grid;
+}
+
+#upcoming .threeRight {
+  font-size: 20px; 
+  display: grid;
+}
+
+#top_rated .fourLeft {
+  font-size: 20px; 
+  display: grid;
+}
+
+#top_rated .fourRight {
+  font-size: 20px; 
+  display: grid;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  width: 30px;
+  height: 30px;
+}
+
+.card1 {
+  width: 6rem;
+  height: 11rem;
+  margin: 10px;
+}
+
+.card1-body h4 {
+  font-size: 13px;
+}
+
+.hub p {
+  font-size: 7px;
+}
+
+.hub h3 {
+  font-size: 7px;
+}
+
+}
+
+
+
+
+@media screen and (max-width:420px) {
+  .socialbtns .fa {
+    width: 20px;
+    height: 15px;
+    color: #000;
+    background-color: #FFF;
+    border: 1px solid #000;
+    padding-top: 4px;
+    border-radius: 22px;
+    -moz-border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -o-border-radius: 22px;
+}
+.foot_start p {
+  width: 95px;
+}
+.footUpper{
+  justify-content: unset;
+}
+.foot1 {
+  width: 63vw;
+  height: 26vh;
+}
+.foot1 img {
+  height: 40px;
+  width: 165px;
+}
+footer p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: white;
+}
+.foot_start p {
+  width: 55px;
+}
+.footLower{
+  display: none;
+}
+.foot2 {
+  height: 26vh;
+  width: 22vw;
+}
+footer h3 {
+  margin: 5px 0 13px 0;
+}
+.foot a {
+  color: white;
+  font-size: 15px;
+  margin: 4px 0;
+}
+.end {
+  height: 10vh;
+  padding: 0px 15px;
+}
+.end p {
+  font-size: 10px;
+}
+
+
+.top nav ul li a {
+  padding: 0px 1vw;
+  font-size: 11px;
+}
+.logo img {
+  height: 26px;
+  margin-top: -10px
+}
+.top video {
+  top: -60%;
+}
+
+}

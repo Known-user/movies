@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/software-download.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="shortcut icon" href="IMG/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/util.css">
+    <link rel="stylesheet" href="CSS/search-responsive.css">
+
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="IMG/logo.png" alt="">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="tag" id="28" href="#" id="series">Action</a></li>
+                    <li><a class="tag" id="18" href="#" id="movies">Drama</a></li>
+                    <li><a class="tag" id="12" href="#">Adventure</a></li>
+                    <li><a class="tag" id="35" href="#">Comedy</a></li>
+                </ul>
+            </div>
+            <div class="search-user">
+                <form action="search.html" id="form">
+                    <input type="text" placeholder="Search..." id="Search_input">
+                </form>
+                <img src="IMG/user.jpeg" alt="">
+            </div>
+        </nav>
+        <div class="search-result">Search Results : </div>
+    </header>
+
+    <main id="main">
+        <div class="statement">Type query to start search..</div>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="footUpper">
+                <div class="foot1">
+                    <img src="IMG/logo.png" alt="">
+                    <p>
+                        CINEMATE is your one-stop destination for all your entertainment here you will get every kind of movie such as latest movies, most popular movies, upcoming, newly released etc
+                    </p>
+                    <div class="foot_start">
+                        <p>Follow us for update</p>
+                        <div align="center" class="socialbtns">
+                            <ul>
+                                <!-- <li><a href="#" class="fa fa-lg fa-facebook"></a></li> -->
+                                <!-- <li><a href="#" class="fa fa-lg fa-twitter"></a></li> -->
+                                <!-- <li><a href="#" class="fa fa-lg fa-discord"></a></li> -->
+                                <li><a target="_blank" href="https://github.com/Known-user" class="fa fa-lg fa-github"></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/in/abhay-rawat-b58b2226b" class="fa fa-lg fa-linkedin"></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/abhayrawat55/" class="fa fa-lg fa-instagram"></a></li>
+                                <!-- <li><a href="#" class="fa fa-lg fa-youtube"></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="foot2">
+                    <h3>Company</h3>
+                    <a href="">About Us</a>
+                    <a href="">Careers</a>
+                    <a href="">Advertize With Us</a>
+                    <a href="">Contact Us</a>
+                    <a href="">FAQ</a>
+                </div>
+            </div>
+
+            <div class="footLower">
+
+                <div class="foot3">
+                    <h3>Legal</h3>
+                    <a href="">Download Apps</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms Of Services</a>
+                    <a href="">Content Complaints</a>
+                    <a href="">Compliance Report</a>
+                </div>
+
+                <div class="foot4">
+                    <h3>Install Our Mobile App For Best Experience</h3>
+                    <div class="foot_end">
+                        <div>
+                            <p>Open camera or any QR scanner app on your mobile</p>
+                            <br>
+                            <p>Scan this QR code and you’ll</p>
+                            <p>prompt a download link</p>
+                            <br>
+                            <p>App Available on<i class='fab fa-google-play' style='font-size:36px'></i><i
+                                    class="fa fa-apple"></i></p>
+                        </div>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot_last">
+            <hr>
+            <div class="end">
+                <p>
+                    Copyright &#169 [2023] [Abhay Singh Rawat]. All rights reserved.
+                </p>
+            </div>
+            <hr>
+        </div>
+    </footer>
+
+    <script src="./JS/search.js"></script>
+    <script>
+        let loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
+</body>
+
+</html>
