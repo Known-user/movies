@@ -30,7 +30,6 @@ header {
     font-family: 'Fira Sans', sans-serif;
     background-color: black;
     width: 100%;
-    /* height: 26vh; */
     position: relative;
     padding: 18px 0px;
 }
@@ -73,7 +72,6 @@ nav ul li a {
 }
 
 .logo img {
-    /* padding: 0 40px 0 0; */
     height: 40px;
     margin-top: -10px;
 }
@@ -113,8 +111,6 @@ nav ul li a:hover {
     color: white;
     font-size: 40px;
     margin-left: 130px;
-    /* position: absolute;
-    bottom: 20px; */
     padding-top: 50px;
 }
 
@@ -241,7 +237,6 @@ nav ul li a:hover {
 
 
 footer {
-    /* height: 60vh; */
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -266,9 +261,7 @@ footer::before {
 .foot {
     display: flex;
     align-items: center;
-    /* height: 40vh; */
     width: 100vw;
-    /* justify-content: space-between; */
     padding: 0px 50px;
     box-sizing: border-box;
     z-index: 999;
@@ -288,32 +281,27 @@ footer::before {
     display: flex;
     flex-direction: column;
     width: 41vw;
-    /* height: 33vh; */
 }
 
 .foot1 img {
-    /* height: 100px; */
     width: 250px;
 }
 
 .foot2 {
     display: flex;
     flex-direction: column;
-    /* height: 33vh; */
     width: 13vw;
 }
 
 .foot3 {
     display: flex;
     flex-direction: column;
-    /* height: 33vh; */
     width: 13vw;
 }
 
 .foot4 {
     display: flex;
     flex-direction: column;
-    /* height: 33vh; */
     width: 31vw;
 }
 

@@ -23,24 +23,24 @@ let threeright_btn = document.getElementsByClassName("threeRight")[0];
 
 oneleft_btn.addEventListener('click', () => {
     first.scrollLeft -= 850;
-  });
-  oneright_btn.addEventListener('click', () => {
+});
+oneright_btn.addEventListener('click', () => {
     first.scrollLeft += 850;
-  });
+});
 
-  twoleft_btn.addEventListener('click', () => {
+twoleft_btn.addEventListener('click', () => {
     second.scrollLeft -= 850;
-  });
-  tworight_btn.addEventListener('click', () => {
+});
+tworight_btn.addEventListener('click', () => {
     second.scrollLeft += 850;
-  });
+});
 
-  threeleft_btn.addEventListener('click', () => {
+threeleft_btn.addEventListener('click', () => {
     third.scrollLeft -= 850;
-  });
-  threeright_btn.addEventListener('click', () => {
+});
+threeright_btn.addEventListener('click', () => {
     third.scrollLeft += 850;
-  });
+});
 
 const movieId = window.localStorage.getItem("movieid");
 console.log(movieId);
@@ -85,7 +85,7 @@ function show(data) {
                     
                     </div>
                     <div class="btns">
-                    <a target="_blank" href="https://www.2embed.to/embed/imdb/movie?id=${final.imdb_id}" id="play">Watch <i class="fa fa-play"></i></a>
+                    <a target="_blank" href="watch.html" id="play">Watch <i class="fa fa-play"></i></a>
                     <a target="_blank" href="https://www.google.com/search?q=${original_title}">Google It</a>
                     </div>
                     </div>`
@@ -151,28 +151,28 @@ function showcast(data) {
     data.forEach(movie => {
         const { name, gender ,known_for_department ,profile_path ,character } = movie;
 
-                let card = document.createElement("a")
-                // card.classList.add('card-item');
-                card.setAttribute("href", `https://www.google.com/search?q=${name}`);
-                card.setAttribute("target","_blank");
-                card.innerHTML = `
-                <div class="card">  
-                <img src="${profile_path ? imgurl + profile_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4>${name}</h4>
-                    <div class="sub">
-                        <p>${character}, ${known_for_department}</p>
-                        <h3>${knwoGender(gender)}</h3>
-                    </div>
-          `
+        let card = document.createElement("a")
+        card.setAttribute("href", `https://www.google.com/search?q=${name}`);
+        card.setAttribute("target","_blank");
+        card.innerHTML = `
+            <div class="card">  
+            <img src="${profile_path ? imgurl + profile_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4>${name}</h4>
+                <div class="sub">
+                    <p>${character}, ${known_for_department}</p>
+                    <h3>${knwoGender(gender)}</h3>
+                </div>
+      `
 
-          first.appendChild(card);
-            });
-   
+      first.appendChild(card);
+    });
 }
+
 getCast(getcast);
 
 const transportMovie = function (movieid) {
+    console.log("hey i am in details transport with movie id" + movieId)
     window.localStorage.setItem("movieid", String(movieid));
 }
 
@@ -181,135 +181,130 @@ const recomended = `https://api.themoviedb.org/3/movie/${movieId}/recommendation
 
 function getrecomendedMovies(url, ele) {
     fetch(url).then(response => response.json())
-      .then(data => {
-        showrecomendedMovies(data.results, ele);
-      });
-  }
-  
-  function showrecomendedMovies(data, ele) {
+        .then(data => {
+            showrecomendedMovies(data.results, ele);
+        });
+}
+
+function showrecomendedMovies(data, ele) {
     ele.innerHTML = '';
     data.forEach(movie => {
-      const { poster_path, title, backdrop_path, release_date, vote_average, id } = movie;
-      let date = release_date.slice(0, 4);
-      let safe = `${getImdb}${id}${imdbkey}`
-      fetch(safe).then(response => response.json())
-        .then(data => {
-  
-          let card = document.createElement("a")
-          card.classList.add('card-item');
-          card.setAttribute("href", "detail.html")
-          card.setAttribute("onclick", `transportMovie(${id})`)
-          card.innerHTML = `
-          <img src="${poster_path ? imgUrl + poster_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" alt="${title}" class="poster">
-          <div class="rest-card">
-              <img src="${imgUrl}${backdrop_path}" alt="">
-              <div class="cont2">
-                  <h4>${title}</h4>
-                  <div class="sub">
-                      <p>${getGenres(data.genres)}, ${date}</p>
-                      <h3><span class="imdb-star">IMDB </span><span class="fa fa-star checked"></span>${vote_average}</h3>
-                  </div>
-              </div>
-          </div>`
-  
-          ele.appendChild(card);
-          transportMovie(id);
-        });
-    });
-  }
+        const { poster_path, title, backdrop_path, release_date, vote_average, id } = movie;
+        let date = release_date.slice(0, 4);
+        let safe = `${getImdb}${id}${imdbkey}`
+        fetch(safe).then(response => response.json())
+            .then(data => {
 
-  getrecomendedMovies(recomended,third);
+                let card = document.createElement("a")
+                card.classList.add('card-item');
+                card.setAttribute("href", "detail.html")
+                card.setAttribute("onclick", `transportMovie(${id})`)
+                card.innerHTML = `
+            <img src="${poster_path ? imgUrl + poster_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" alt="${title}" class="poster">
+            <div class="rest-card">
+                <img src="${imgUrl}${backdrop_path}" alt="">
+                <div class="cont2">
+                    <h4>${title}</h4>
+                    <div class="sub">
+                        <p>${getGenres(data.genres)}, ${date}</p>
+                        <h3><span class="imdb-star">IMDB </span><span class="fa fa-star checked"></span>${vote_average}</h3>
+                    </div>
+                </div>
+            </div>`
+
+                ele.appendChild(card);
+                // transportMovie(id);
+            });
+    });
+}
+
+getrecomendedMovies(recomended,third);
 
 
 const elementsimilar = document.getElementById("similar");
 
-  function getSimilarMovies(url, ele) {
+function getSimilarMovies(url, ele) {
     fetch(url).then(response => response.json())
-      .then(data => {
-        showSimilarMovies(data.results, ele);
-      });
-  }
-  
-  function showSimilarMovies(data, ele) {
+        .then(data => {
+            showSimilarMovies(data.results, ele);
+        });
+}
+
+function showSimilarMovies(data, ele) {
     ele.innerHTML = '';
     data.forEach(movie => {
-      const { poster_path, title, backdrop_path, release_date, vote_average, id } = movie;
+        const { poster_path, title, backdrop_path, release_date, vote_average, id } = movie;
 
-      if(movie.length>0){
+        if (movie.length > 0) {
 
-          let date = release_date.slice(0, 4);
-          let safe = `${getImdb}${id}${imdbkey}`
-          fetch(safe).then(response => response.json())
-          .then(data => {
-              
-              let card = document.createElement("a")
-              card.classList.add('card-item');
-              card.setAttribute("href", "detail.html")
-              card.setAttribute("onclick", `transportMovie(${id})`)
-              card.innerHTML = `
-              <img src="${poster_path ? imgUrl + poster_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" alt="${title}" class="poster">
-              <div class="rest-card">
-              <img src="${imgUrl}${backdrop_path}" alt="">
-              <div class="cont2">
-              <h4>${title}</h4>
-              <div class="sub">
-              <p>${getGenres(data.genres)}, ${date}</p>
-              <h3><span class="imdb-star">IMDB </span><span class="fa fa-star checked"></span>${vote_average}</h3>
-              </div>
-              </div>
-              </div>`
-              
-              ele.appendChild(card);
-              transportMovie(id);
-            });
+            let date = release_date.slice(0, 4);
+            let safe = `${getImdb}${id}${imdbkey}`
+            fetch(safe).then(response => response.json())
+                .then(data => {
+
+                    let card = document.createElement("a")
+                    card.classList.add('card-item');
+                    card.setAttribute("href", "detail.html")
+                    card.setAttribute("onclick", `transportMovie(${id})`)
+                    card.innerHTML = `
+            <img src="${poster_path ? imgUrl + poster_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" alt="${title}" class="poster">
+            <div class="rest-card">
+            <img src="${imgUrl}${backdrop_path}" alt="">
+            <div class="cont2">
+            <h4>${title}</h4>
+            <div class="sub">
+            <p>${getGenres(data.genres)}, ${date}</p>
+            <h3><span class="imdb-star">IMDB </span><span class="fa fa-star checked"></span>${vote_average}</h3>
+            </div>
+            </div>
+            </div>`
+
+                    ele.appendChild(card);
+                    transportMovie(id);
+                });
         }
-        else{
+        else {
             elementsimilar.innerHTML = "";
         }
     });
-  }
+}
 
+getrecomendedMovies(similar, second);
 
+const video = document.getElementById("video");
+const youtube = document.getElementById("youtube");
+const videoUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=2db93f250eeb052e87cdc828c2faefeb&language=en-US`;
 
+function getMovieVideo(url) {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.results && data.results.length > 0) {
+                const youtubeVideos = data.results.filter(video => video.site === "YouTube");
+                if (youtubeVideos.length > 0) {
+                    const firstVideoKey = youtubeVideos[0].key;
+                    const iframe = document.createElement("iframe");
+                    iframe.width = "760";
+                    iframe.height = "400";
+                    iframe.src = `https://www.youtube.com/embed/${firstVideoKey}`;
+                    iframe.title = "YouTube Video";
+                    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                    iframe.allowFullscreen = true;
+                    video.appendChild(iframe);
+                } else {
+                    youtube.style.display = "none";
+                    console.log("No YouTube video found for this movie.");
+                }
+            } else {
+                youtube.style.display = "none";
+                console.log("Failed to fetch video data.");
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching video data:", error);
+            youtube.style.display = "none";
+        });
+}
 
-  getrecomendedMovies(similar,second);
+getMovieVideo(videoUrl);
 
-
-
-  const video = document.getElementById("video");
-  const youtube = document.getElementById("youtube");
-  const videoUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=2db93f250eeb052e87cdc828c2faefeb&language=en-US`;
-  
-  function getMovieVideo(url) {
-     fetch(url).then(response => response.json())
-         .then(data => {
-             if(data){
-                 if(data.results.length>0){
-                     var embed = [];
-                     var temp = [];
-                     data.results.forEach((Video) => {
-                         let {name,type,site,key} = Video
-                         if(type=="Teaser" && site=="YouTube" ||  type=="Trailer" && site=="YouTube"){
-                             temp.push(`<iframe width="760" height="400" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                             `)
-                         }
-                     });
-                     let a= temp[0];
-                     embed.push(a);
-                     video.innerHTML = embed.join('');
-                 }
-                 else{
-                     youtube.style.display="none";
-                     console.log("task failed");
-                 }
-         }   
-  })
-  }
-  
-  getMovieVideo(videoUrl);
-// const newid = movieid;
-
-  window.addEventListener("beforeunload",function(){
-    window.localStorage.setItem("movieid", String(movieId));
-    console.log(movieId)
-  })

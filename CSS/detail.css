@@ -24,7 +24,6 @@ body{
 }
 
 header {
-    /* height: 75vh; */
     position: relative;
 }
 
@@ -34,26 +33,10 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 20px 20px 70vh 20px; */
     box-sizing: border-box;
     position: absolute;
     top: 0;
-    /* background-color: black; */
 }
-
-/* nav {
-    width: 100%;
-    height: 40%;
-    border-radius: 40px 40px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-    box-sizing: border-box;
-    position: inherit;
-    z-index: 999;
-    margin-top: 23px;
-} */
 
 nav ul {
     display: flex;
@@ -78,7 +61,6 @@ nav ul li a {
 }
 
 .logo img {
-    /* padding: 0 40px 0 0; */
     height: 40px;
     margin-top: -10px;
 }
@@ -116,13 +98,8 @@ nav ul li a:hover {
 
 
 #background img {
-
-    /* position: absolute;
-    top: 0;
-    left: 0; */
     width: 100vw;
-    height: 30rem;
-    /* z-index: -1; */
+    height: 45rem;
 
 }
 
@@ -132,7 +109,6 @@ nav ul li a:hover {
 
 
 main {
-    /* min-height: 80vh; */
     background: linear-gradient(#000, #121212);
     position: relative;
 }
@@ -266,7 +242,6 @@ main {
 
 .container {
     color: #fff;
-    /* border: 2px solid white; */
     padding: 0 40px;
 }
 
@@ -287,7 +262,6 @@ main {
 
 .trailer {
     height: 70vh;
-    /* border: 2px solid red; */
     display: flex;
 justify-content: center;
 align-items: center;
@@ -297,7 +271,6 @@ align-items: center;
 main .container section {
     width: 100%;
     height: auto;
-    /* padding: 0 50px; */
     margin: 30px 0;
     color: #fff;
     box-sizing: border-box;
@@ -489,7 +462,6 @@ main .container section .cards .card-item:hover {
 
 .sub {
     display: flex;
-    /* margin: 0px 0 12px 14px; */
 }
 
 .sub p {
@@ -549,7 +521,6 @@ main .container section .cards .card-item:hover {
 
 
 footer {
-    /* height: 60vh; */
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -574,9 +545,7 @@ footer::before {
 .foot {
     display: flex;
     align-items: center;
-    /* height: 40vh; */
     width: 100vw;
-    /* justify-content: space-between; */
     padding: 0px 50px;
     box-sizing: border-box;
     z-index: 999;
@@ -596,32 +565,27 @@ footer::before {
     display: flex;
     flex-direction: column;
     width: 41vw;
-    /* height: 33vh; */
 }
 
 .foot1 img {
-    /* height: 100px; */
     width: 250px;
 }
 
 .foot2 {
     display: flex;
     flex-direction: column;
-    /* height: 33vh; */
     width: 13vw;
 }
 
 .foot3 {
     display: flex;
     flex-direction: column;
-    /* height: 33vh; */
     width: 13vw;
 }
 
 .foot4 {
     display: flex;
     flex-direction: column;
-    /* height: 33vh; */
     width: 31vw;
 }
 

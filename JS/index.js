@@ -130,7 +130,7 @@ function show(data, ele) {
         </div>`
 
         ele.appendChild(card);
-        transportMovie(id);
+        // transportMovie(id);
       });
   });
 }
