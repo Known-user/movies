@@ -117,9 +117,9 @@ function show(data, ele) {
         card.setAttribute("href", "detail.html")
         card.setAttribute("onclick", `transportMovie(${id})`)
         card.innerHTML = `
-        <img src="${poster_path ? imgUrl + poster_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" alt="${title}" class="poster">
+        <img loading="lazy" src="${poster_path ? imgUrl + poster_path : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vrTUU3CKbUDThpm8aZzFXdTmai6PodNfXA&usqp=CAU"}" alt="${title}" class="poster">
         <div class="rest-card">
-            <img src="${imgUrl}${backdrop_path}" alt="">
+            <img loading="lazy" src="${imgUrl}${backdrop_path}" alt="">
             <div class="cont2">
                 <h4>${title}</h4>
                 <div class="sub">

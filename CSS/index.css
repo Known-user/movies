@@ -407,7 +407,7 @@ main .container section .cards .card-item {
     height: 220px;
     margin-right: 10px;
     background: #000;
-    transition: .3s linear;
+    transition: .1s linear;
 }
 
 .poster {

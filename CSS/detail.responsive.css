@@ -49,7 +49,7 @@
     } */
 
     .head img {
-        height: 27vh;
+        /* height: 27vh; */
     }
 
     .content h1 {
@@ -82,6 +82,10 @@
     .foot a {
         color: white;
         font-size: 15px;
+    }
+    .yt-video{
+      width: 100%;
+      height: 70%;
     }
 }  
 
@@ -385,7 +389,10 @@
     margin: 0 6px 0 6px;
   }
   .head img {
-    height: 21vh;
+    height: 16vh;
+  }
+  .content h1{
+    font-size: 25px;
   }
 
   main .container section .cards {
