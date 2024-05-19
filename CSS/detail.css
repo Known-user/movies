@@ -360,6 +360,7 @@ main .container section .cards .card-item:hover {
 .sub {
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .sub p {
